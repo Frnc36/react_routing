@@ -1,7 +1,15 @@
+import { Link, useParams } from "react-router";
+
 function AdottTermek() {
+  const { id } = useParams();
+
   return (
-    <div>AdottTermek Egyetlen konkrét termék részeltei/megjelenítése</div>
-  )
+    <section>
+      <h2>Termék részletei</h2>
+      <p>A termék azonosítója: {id}</p>
+      <Link to="/">Vissza a termékekhez</Link>
+    </section>
+  );
 }
 
-export default AdottTermek
+export default AdottTermek;

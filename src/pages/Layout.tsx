@@ -1,13 +1,24 @@
 /* itt hatátozuk meg az oldal fő szerkezetét */
 //hova is kerünek be a page-k
-import { Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 function Layout() {
   return (
-    <div>
-      Layout
-      <Outlet />
-    </div>
+    <>
+      <header>
+        <h1>Webáruház</h1>
+        <nav>
+          <NavLink to="/" end>
+            Publikus
+          </NavLink>
+          <NavLink to="/admin">Admin</NavLink>
+          <NavLink to="/kosar">Kosár</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
 
